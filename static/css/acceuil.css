@@ -5,6 +5,7 @@
 html {
     font-size: 62.5%;
     font-family: var(--poppins);
+    overflow-x: hidden;
 }
 
 * {
@@ -48,8 +49,8 @@ html {
     --p-tab  : 1.9rem;
     --p-tel  : 1.6rem;
     /* Links */
-    --a-pc   : 1.8rem;
-    --a-tab  : 1.4rem;
+    --a-pc   : 1.6rem;
+    --a-tab  : 1.2rem;
     --a-tel  : 1rem;
 }
 
@@ -59,6 +60,11 @@ html {
     top: 0;
     left: 0;
     width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(#101111c2,#101111c2),url('../img/pexels-nicetomizzu-6910933.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .nav__info {
@@ -79,6 +85,90 @@ html {
 
 .info__container p,.info__container a{
     font-size: var(--a-pc);
+}
+
+.nav {
+    position: relative;
+}
+
+.nav__container {
+    width: 80%;
+    height: 10rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__container img {
+    width: 10rem;
+}
+
+.nav__menu {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 1.6rem;
+}
+
+.nav__link span{
+    font-size: var(--a-pc);
+    transition: 0.5s;
+    position: relative;
+}
+
+.nav__link span::after {
+    content: "";
+    width: 0;
+    height: 0.2rem;
+    position: absolute;
+    left: 0;
+    bottom: -0.06rem;
+    background-color: var(--gold);
+    transition: 0.5s;
+}
+
+.nav__link:hover span{
+    color: var(--gold);
+}
+
+.nav__link:hover span::after{
+    width: 100%;
+}
+
+.nav__toggle {
+    font-size: var(--a-pc);
+    display: none;
+}
+
+.nav__main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1rem;
+}
+
+.nav__main h1 {
+    font-size: var(--h1-pc);
+    position: relative;
+    top: -3rem;
+    left: 0rem;
+}
+
+.nav__main a {
+    font-size: var(--a-pc);
+    padding: 1rem 1.5rem;
+    border: 0.2rem solid var(--gold);
+    color: var(--gold);
+    transition: 0.5s;
+}
+
+.nav__main a:hover {
+    color: white;
+    background-color: var(--gold);
 }
 
 /*--==== Fin des travaux sur tout ce qui concerne le « header » du site ====--*/
