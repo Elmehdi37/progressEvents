@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:opsz,wght@10..72,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:opsz,wght@10..72,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+html {
+    font-size: 62.5%;
+    font-family: var(--poppins);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1;
+    text-decoration: none;
+    list-style: none;
+    color: var(--white);
+}
+
+:root {
+    /*--==== Constantes du texte sur le site ====--*/
+    --shoulder : "Big Shoulders Stencil", sans-serif;
+    --oswald   : "Oswald", sans-serif;
+    --poppins  : "Poppins", sans-serif;
+
+    /*--==== Constantes de couleur sur le site ====--*/
+    --gold        : #eabc3e;
+    --green       : #1e363b;
+    --green-light : #007a6a;
+    --gray-light  : #d5dfe5;
+    --gray        : #353535;
+    --white       : #fff;
+    --black       : #000;
+
+    /*--==== Constantes de taille du texte sur le site ====--*/
+    /* Titres */
+    --h1-pc  : 4.8rem;
+    --h1-tab : 4.0rem;
+    --h1-tel : 2.6rem;
+    --h2-pc  : 3.8rem;
+    --h2-tab : 3.2rem;
+    --h2-tel : 2.3rem;
+    --h3-pc  : 3.2rem;
+    --h3-tab : 2.8rem;
+    --h3-tel : 2rem;
+    /* Sauce paragraphe */
+    --p-pc   : 2.2rem;
+    --p-tab  : 1.9rem;
+    --p-tel  : 1.6rem;
+    /* Links */
+    --a-pc   : 1.8rem;
+    --a-tab  : 1.4rem;
+    --a-tel  : 1rem;
+}
+
+/*--==== Les travaux ont commencé sur tout ce qui concerne le "header" du site ====--*/
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+}
+
+.nav__info {
+    position: relative;
+    width: 100%;
+    height: 3rem;
+    background-color: var(--gold);
+}
+
+.info__container {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info__container p,.info__container a{
+    font-size: var(--a-pc);
+}
+
+/*--==== Fin des travaux sur tout ce qui concerne le « header » du site ====--*/
+
+/* Travailler sur la compatibilité de la page avec les écrans moyens */
+@media (min-width:865px) and (max-width:1024px) {
+
+}
+
+@media (max-width:864px) {
+    /*--==== Les travaux ont commencé sur tout ce qui concerne le "header" du site ====--*/
+    .nav__info {
+        height: 2rem;
+    }
+    .info__container p,.info__container a{
+        font-size: var(--a-tele);
+    }
+    /*--==== Fin des travaux sur tout ce qui concerne le « header » du site ====--*/
+}
