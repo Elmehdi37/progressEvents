@@ -185,7 +185,7 @@ html {
 
 /*--==== Fin des travaux sur tout ce qui concerne le « header » du site ====--*/
 
-/*--==== Fin des travaux sur tout ce qui concerne le « header » du site ====--*/
+/*--==== Commencez à travailler sur  « Description » ====--*/
 
 .description {
     padding: 5rem;
@@ -209,6 +209,75 @@ html {
     font-size: 2rem;
     line-height: 1.2;
 }
+
+/*--==== Fin des travaux sur « Description » ====--*/
+
+/*--==== Commencez à travailler sur  « Exprtise » ====--*/
+
+.expertise {
+    padding: 5rem;
+    background-color: var(--green);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2rem;
+}
+
+.expertise h1 {
+    font-size: 6rem;
+    font-family: var(--oswald);
+}
+
+.container-expertise {
+    width: 95%;
+    padding: 4rem;
+    background-color: var(--white);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 4rem;
+}
+
+.box {
+    width: 30%;
+    background-color: #1e363b;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: .5rem;
+    text-align: center;
+    transition: .4s;
+}
+
+.box:hover {
+    transform: translateY(-1rem);
+    background-color: #eabc3e;
+    box-shadow: -6px -6px 1px #4c3d14;
+}
+
+.box h3 {
+    font-size: 2.5rem;
+}
+
+.box p {
+    font-size: 1.8rem;
+}
+
+.icone {
+    font-size: 10rem;
+} 
+
+.icone-2 {
+    font-size: 4rem;
+}
+
+/*--==== Fin des travaux sur « Expertise » ====--*/
+
+/*--==== Commencez à travailler sur  « Confiance » ====--*/
+
+
+
 
 /* Travailler sur la compatibilité de la page avec les écrans moyens */
 @media (min-width:865px) and (max-width:1024px) {
@@ -277,6 +346,21 @@ html {
     }
     
     /*--==== Fin des travaux sur tout ce qui concerne le « header » du site ====--*/
+
+    /*--==== Commencez à travailler sur  « Exprtise » ====--*/
+
+    .container-expertise {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        row-gap: 4rem;
+        align-items: center;
+    }
+
+    .box {
+        width: 100%;
+        row-gap: 1rem;
+        text-align: center;
+    }
 }
 
 @media (max-width:864px) {
@@ -312,7 +396,7 @@ html {
     .show_menu {
         left: 0;
     }
-    
+
     .nav__link span , .nav__link i{
         font-size: 2rem;
     }
@@ -371,5 +455,39 @@ html {
     .description p {
         font-size:1rem;
         line-height: 1.2;
+    }
+
+    /*--==== Commencez à travailler sur  « Exprtise » ====--*/
+    .expertise h1 {
+        font-size: 2.5rem;
+    }
+
+    .container-expertise {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        row-gap: 4rem;
+        align-items: center;
+    }
+
+    .box {
+        width: 100%;
+        row-gap: 1rem;
+        text-align: center;
+    }
+
+    .box h3 {
+        font-size: 1.5rem;
+    }
+    
+    .box p {
+        font-size: 1rem;
+    }
+    
+    .icone {
+        font-size: 5rem;
+    } 
+    
+    .icone-2 {
+        font-size: 2rem;
     }
 }
