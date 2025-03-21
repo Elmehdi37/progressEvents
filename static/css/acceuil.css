@@ -189,7 +189,6 @@ html {
 
 .description {
     padding: 5rem;
-    height: 30rem;
     width: 100vw;
     background-color: var(--gold);
     display: flex;
@@ -276,8 +275,129 @@ html {
 
 /*--==== Commencez à travailler sur  « Confiance » ====--*/
 
+.confiance {
+    padding: 5rem;
+    background-color: var(--gold);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2rem;
+    text-align: center;
+}
+
+.confiance h1 {
+    font-size: 6rem;
+    font-family: var(--oswald);
+}
+
+.confiance p {
+    font-size: 1.8rem;
+}
+
+.container-confiance {
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.container-confiance img {
+    width: 10rem;
+    height: 10rem;
+    margin: 0 2rem;
+}
+
+.move-container {
+    display: inline-block;
+    column-gap: 2rem;
+    animation: move;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes move {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/*--==== Fin des travaux sur « confiance » ====--*/
+
+/*--==== Commencez à travailler sur  « Footer » ====--*/
+
+.footer {
+    padding: 5rem;
+    background-color: var(--green);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.boxOne,.boxTwo,.boxThree,.boxFour {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    width: 23%;
+    height: 25rem;
+    padding: 0.5rem;
+}
 
 
+.boxOne h1,.boxTwo h1,.boxThree h1,.boxFour h1 {
+    font-size: 3rem;
+}
+
+.boxOne .box-content,.boxThree .box-content,.boxFour .box-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+}
+
+.box-content p, .boxOne a , .boxTwo p , .boxThree a{
+    font-size: 1.5rem;
+    line-height: 1.2;
+}
+
+.boxFour .box-content {
+    justify-content: center;
+    height: 60%;
+}
+
+.boxFour input{
+    background: none;
+    outline: none;
+    border: none;
+    padding: 0.2rem;
+    border-bottom: 0.2rem solid var(--white);
+    color: var(--white);
+}
+
+.boxFour button {
+    padding: 1rem 2rem;
+    color: var(--white);
+    background-color: var(--gold);
+    outline: none;
+    border: none;
+}
+
+.copyright {
+    padding: 2rem;
+    background-color: #eabc3e;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+.copyright p {
+    font-size: 1.5rem;
+}
 
 /* Travailler sur la compatibilité de la page avec les écrans moyens */
 @media (min-width:865px) and (max-width:1024px) {
@@ -347,7 +467,7 @@ html {
     
     /*--==== Fin des travaux sur tout ce qui concerne le « header » du site ====--*/
 
-    /*--==== Commencez à travailler sur  « Exprtise » ====--*/
+    /*--==== Commencez à travailler sur  « Expertise » ====--*/
 
     .container-expertise {
         flex-wrap: nowrap;
@@ -360,6 +480,15 @@ html {
         width: 100%;
         row-gap: 1rem;
         text-align: center;
+    }
+
+    /*--==== Fin des travaux sur tout ce qui concerne le « Expertise » du site ====--*/
+
+    /*--==== Commencez à travailler sur  « Confiance » ====--*/
+    .container-confiance img {
+        width: 6rem;
+        height: 6rem;
+        margin: 0 2rem;
     }
 }
 
@@ -442,14 +571,12 @@ html {
 
     .description {
         padding: 2rem;
-        height: 15rem;
         width: 100vw;
         row-gap: 1rem;
     }
     
     .description h1 {
         font-size: 2.5rem;
-        font-family: var(--oswald);
     }
     
     .description p {
@@ -490,4 +617,56 @@ html {
     .icone-2 {
         font-size: 2rem;
     }
+
+    /*--==== Commencez à travailler sur  « Confiance » ====--*/
+
+    .confiance {
+        padding: 2rem;
+        width: 100vw;
+        row-gap: 1rem;
+    }
+
+    .confiance h1 {
+        font-size: 2.5rem;
+    }
+
+    .confiance p {
+        font-size:1rem;
+    }
+
+    /*--==== Commencez à travailler sur  « Confiance » ====--*/
+    .container-confiance img {
+        width: 4rem;
+        height: 4rem;
+        margin: 0 2rem;
+    }
+
+    /*--==== Commencez à travailler sur  « Footer » ====--*/
+
+    .footer {
+        padding: 2rem;
+        background-color: var(--green);
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .boxOne,.boxTwo,.boxThree,.boxFour {
+        height: 20rem;
+        width: 44%;
+        padding: 0.5rem;
+    }
+
+
+    .boxOne h1,.boxTwo h1,.boxThree h1,.boxFour h1 {
+        font-size: 2rem;
+    }
+
+    .box-content p, .boxOne a , .boxTwo p , .boxThree a{
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
 }
