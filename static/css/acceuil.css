@@ -56,7 +56,7 @@ html {
 
 /*--==== Les travaux ont commencé sur tout ce qui concerne le "header" du site ====--*/
 .header {
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     width: 100vw;
@@ -66,6 +66,7 @@ html {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 
 .nav__info {
     position: relative;
@@ -118,6 +119,12 @@ html {
     position: relative;
 }
 
+.nav__link i {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+}
+
 .nav__link span::after {
     content: "";
     width: 0;
@@ -139,7 +146,10 @@ html {
 
 .nav__toggle {
     font-size: var(--a-pc);
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    cursor: pointer;
 }
 
 .nav__main {
@@ -152,10 +162,11 @@ html {
 }
 
 .nav__main h1 {
-    font-size: var(--h1-pc);
+    font-size: 8rem;
     position: relative;
     top: -3rem;
     left: 0rem;
+    font-family: var(--shoulder);
 }
 
 .nav__main a {
@@ -164,6 +175,7 @@ html {
     border: 0.2rem solid var(--gold);
     color: var(--gold);
     transition: 0.5s;
+    font-family: var(--oswald);
 }
 
 .nav__main a:hover {
@@ -173,9 +185,98 @@ html {
 
 /*--==== Fin des travaux sur tout ce qui concerne le « header » du site ====--*/
 
+/*--==== Fin des travaux sur tout ce qui concerne le « header » du site ====--*/
+
+.description {
+    padding: 5rem;
+    height: 30rem;
+    width: 100vw;
+    background-color: var(--gold);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2rem;
+    text-align: center;
+}
+
+.description h1 {
+    font-size: 6rem;
+    font-family: var(--oswald);
+}
+
+.description p {
+    font-size: 2rem;
+    line-height: 1.2;
+}
+
 /* Travailler sur la compatibilité de la page avec les écrans moyens */
 @media (min-width:865px) and (max-width:1024px) {
+    /*--==== Les travaux ont commencé sur tout ce qui concerne le "header" du site ====--*/
 
+    .nav__menu {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100vw;
+        height: 100vh;
+        z-index: 100;
+        background-color: var(--green);
+        padding: 6rem 3.5rem 4.5rem;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        column-gap: 0;
+        row-gap: 3rem;
+        transition: 0.5s;
+    }
+
+    .show_menu {
+        left: 0;
+    }
+
+    .nav__link span , .nav__link i{
+        font-size: 4rem;
+    }
+
+    .nav__link span {
+        position: relative;
+    }
+
+    .nav__link span:hover {
+        margin-left: 3.8rem;
+        transition: 0.5s;
+    }
+
+    .nav__link:hover i {
+        visibility: visible;
+        opacity: 1;
+        transition: 0.5s;
+        color: var(--gold);
+    }
+
+    .nav__menu:has(.nav__link:hover) .nav__link:not(:hover) {
+        opacity: 0.4;
+        transition: 0.4s;
+    }
+
+    .nav__toggle {
+        visibility: visible;
+        opacity: 1;
+        font-size: 4rem;
+        position: relative;
+        z-index: 200;
+    }
+
+    .nav__main h1 {
+        font-size: 8rem;
+    }
+    
+    .nav__main a {
+        font-size: 3rem;
+    }
+    
+    /*--==== Fin des travaux sur tout ce qui concerne le « header » du site ====--*/
 }
 
 @media (max-width:864px) {
@@ -186,5 +287,89 @@ html {
     .info__container p,.info__container a{
         font-size: var(--a-tele);
     }
+
+    .nav__container img {
+        width: 6rem;
+    }
+
+    .nav__menu {
+        position: absolute;
+        top: 0;
+        left:-100%;
+        width: 100vw;
+        height: 100vh;
+        z-index: 100;
+        background-color: var(--green);
+        padding: 6rem 3.5rem 4.5rem;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        column-gap: 0;
+        row-gap: 3rem;
+        transition: 0.5s;
+    }
+
+    .show_menu {
+        left: 0;
+    }
+    
+    .nav__link span , .nav__link i{
+        font-size: 2rem;
+    }
+
+    .nav__link span {
+        position: relative;
+    }
+
+    .nav__link span:hover {
+        margin-left: 3.8rem;
+        transition: 0.5s;
+    }
+
+    .nav__link:hover i {
+        visibility: visible;
+        opacity: 1;
+        transition: 0.5s;
+        color: var(--gold);
+    }
+
+    .nav__menu:has(.nav__link:hover) .nav__link:not(:hover) {
+        opacity: 0.4;
+        transition: 0.4s;
+    }
+
+    .nav__toggle {
+        visibility: visible;
+        opacity: 1;
+        font-size: 2rem;
+        position: relative;
+        z-index: 200;
+    }
+
+    .nav__main h1 {
+        font-size: 3.5rem;
+    }
+    
+    .nav__main a {
+        font-size: 2rem;
+    }
+
     /*--==== Fin des travaux sur tout ce qui concerne le « header » du site ====--*/
+
+    .description {
+        padding: 2rem;
+        height: 15rem;
+        width: 100vw;
+        row-gap: 1rem;
+    }
+    
+    .description h1 {
+        font-size: 2.5rem;
+        font-family: var(--oswald);
+    }
+    
+    .description p {
+        font-size:1rem;
+        line-height: 1.2;
+    }
 }
